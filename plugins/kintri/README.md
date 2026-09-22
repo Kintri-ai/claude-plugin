@@ -6,7 +6,7 @@ reach it, and starts the local daemon.
 ```bash
 # 1. the binary (macOS / Linux) - https://github.com/Kintri-ai/kintri
 curl -fsSL https://raw.githubusercontent.com/Kintri-ai/kintri/main/install.sh | sh
-kintri login --url https://app.kintri.ai
+kintri login
 
 # 2. the plugin, inside Claude Code
 /plugin marketplace add Kintri-ai/claude-plugin
@@ -24,7 +24,7 @@ On a machine with no browser - a build agent, a container, an SSH session with
 no port forwarding - mint a token in Settings and pass it instead:
 
 ```bash
-kintri login --url https://kintri.example.com --token emt_…
+kintri login --token emt_…
 ```
 
 ## What this sends

@@ -15,7 +15,7 @@ calls it.
 ```bash
 # 1. the binary, then log in (opens your browser; approve this machine)
 curl -fsSL https://raw.githubusercontent.com/Kintri-ai/kintri/main/install.sh | sh
-kintri login --url https://app.kintri.ai
+kintri login
 ```
 
 Inside Claude Code:
