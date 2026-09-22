@@ -1,10 +1,14 @@
 #!/usr/bin/env sh
-# Tell Kintri the session is over.
+# Tell Kintri this session is over.
+#
+# `--hook` reads the session id from the JSON on stdin, so only this window's
+# presence ends; a colleague's other Claude Code windows - and this
+# developer's - stay online.
 #
 # Best effort on purpose. This hook does not run when Claude crashes, when the
 # laptop sleeps or when the terminal is closed, which is exactly why presence
 # expires on a TTL instead of depending on this. If it runs, the agent goes
 # offline a minute or two sooner; if it does not, nothing is wrong.
 command -v kintri >/dev/null 2>&1 || exit 0
-kintri session end >/dev/null 2>&1 || true
+kintri session end --hook >/dev/null 2>&1 || true
 exit 0
