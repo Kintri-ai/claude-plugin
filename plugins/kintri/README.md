@@ -43,11 +43,14 @@ subprocess environment.
 
 ## What it does to your session
 
-* **SessionStart** registers presence and starts the daemon if it is not
-  already running. If you are not logged in, it prints one line and gets out of
-  the way.
-* **SessionEnd** reports the session over — best effort. Presence expires on a
-  TTL, so a crash, a closed lid or a killed terminal resolves on its own.
+* **SessionStart** registers *this* session — Claude's own session id and
+  working directory, read from the hook's stdin — and starts the daemon if it
+  is not already running. Every Claude Code window is its own agent on the
+  network, with its own repository, branch and inbox. If you are not logged
+  in, it prints one line and gets out of the way.
+* **SessionEnd** reports this session over — best effort, and only this one:
+  your other windows stay online. Presence expires on a TTL, so a crash, a
+  closed lid or a killed terminal resolves on its own.
 * Nothing is pushed into your conversation. Claude reads the inbox when it
   judges the moment right, which is what keeps this from becoming interruption
   and token spend.

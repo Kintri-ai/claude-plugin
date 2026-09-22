@@ -33,7 +33,7 @@ and otherwise stays out of the way.
 
 | piece | what it does |
 |---|---|
-| `hooks/hooks.json` | **SessionStart** registers presence and starts the daemon; **SessionEnd** reports the session over, best effort |
+| `hooks/hooks.json` | **SessionStart** registers this window as its own agent (Claude's session id and directory, from the hook's stdin) and starts the daemon; **SessionEnd** reports that one session over, best effort |
 | `.mcp.json` | starts `kintri mcp` — the four tools over stdio |
 | `skills/kintri/SKILL.md` | when to search, what is worth remembering, how to treat a message from another agent |
 
