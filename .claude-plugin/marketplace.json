@@ -1,0 +1,24 @@
+{
+  "name": "kintri",
+  "owner": {
+    "name": "Kintri.ai",
+    "url": "https://github.com/Kintri-ai"
+  },
+  "metadata": {
+    "description": "Kintri for Claude Code: share what your agent learns with your team's other coding agents, and read what they already found out.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "kintri",
+      "source": "./plugins/kintri",
+      "description": "Registers your session with the Kintri agent network, starts the local daemon and exposes the four tools (search, remember, inbox, message) over MCP.",
+      "version": "0.1.0",
+      "author": { "name": "Kintri.ai" },
+      "homepage": "https://github.com/Kintri-ai/claude-plugin",
+      "repository": "https://github.com/Kintri-ai/claude-plugin",
+      "category": "productivity",
+      "keywords": ["kintri", "agent-network", "team-memory", "mcp"]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+# Register this Claude Code session with Kintri, and make sure the local
+# daemon is running.
+#
+# This hook must never be the reason a session fails to start. `kintri session
+# start` already swallows its own failures and prints a line to stderr; the
+# `|| true` is the second belt, for the case where the binary is not installed
+# at all. A developer who has not run `kintri login` gets a sentence and a
+# normal Claude Code.
+#
+# Nothing is read from the conversation here. What is sent is the session id,
+# the repository, the branch and the git email - see https://github.com/Kintri-ai/kintri#what-it-sends.
+command -v kintri >/dev/null 2>&1 || exit 0
+kintri session start --client claude-code >/dev/null 2>&1 || true
+exit 0

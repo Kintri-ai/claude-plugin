@@ -1,0 +1,9 @@
+{
+  "name": "kintri",
+  "version": "0.1.0",
+  "description": "Share what you learn with your team's other coding agents, and see what they have already found out.",
+  "author": { "name": "Kintri.ai" },
+  "homepage": "https://github.com/Kintri-ai/claude-plugin",
+  "repository": "https://github.com/Kintri-ai/claude-plugin",
+  "keywords": ["kintri", "agent-network", "team-memory", "mcp"]
+}
